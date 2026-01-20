@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>my contact</title>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #0a7a3d;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+/* This is where desktop = 2 columns, mobile = stacked*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+}
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 12px 0 5px;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #0a7a3d;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  background-color: #0a7a3d;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+.contact-info {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 8px;
+	
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+ color: #0a7a3d;
+  font-size: 18px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #111;
+}
+
+.contact-item a:hover {
+  color: #2563eb;
+}
+iframe {
+  width: 100%;
+  height: 250px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+.nav{ 
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #0a7a3d;
+width: 100%;
+padding: 8px 16px;
+
+}
+.nav a{
+text-decoration: none;
+font-weight: bold;
+color: black;
+font-size: 18px;
+}
+h4 a{
+text-decoration: none;
+margin: 5px;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+<h1>Let's Work Together</h1>
+<p>i'd love to hear from you feel free to reach out with questions or just to say hello
+</p>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="service.html">Services</a>
+</div>
+</header>
+
+<section class="container">
+<div class="card">
+<h2>Contact Me</h2>
+<form>
+	<label for="fullname">Name:</label>
+	<input type="text" id="fullname" name="fullname" placeholder="yourname">
+	
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="@example.com">
+	
+<label for="subject">subject:</label>
+<select id="subject" name="subject">
+<option value="choose your subject">choose your subject</option>
+<option value="Freelance Work">Freelance Work:</option>
+<option value="Job Offer">Job Offer:</option>
+<option value="Collaboration">Collaboration:</option>
+<option value="other">other:</option>
+</select>
+<label for="message">Send us message:</label>
+<textarea id="message" name="message" rows="5"></textarea>
+<button type="submit">Submit</button>
+<p>Thanks! I will get back to you soon.....</p>
+</form>
+</div>
+<div class="contact-info">
+  <div class="contact-item">
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:grakkeyfintech@gmail.com">Email:grakkeyfintech@gmail.com</a>
+  </div>
+
+  <div class="contact-item">
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:+2348034948338">phone: +2348034948338</a>
+  </div>
+
+  <div class="contact-item">
+    <i class="fa-brands fa-linkedin"></i>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">
+      LinkedIn
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <i class="fa-brands fa-github"></i>
+    <a href="https://github.com/yourusername" target="_blank">
+      GitHub
+    </a>
+  </div>
+
+  <div class="contact-item">
+    <i class="fa-brands fa-x-twitter"></i>
+    <a href="https://twitter.com/yourusername" target="_blank">
+      Twitter
+    </a>
+  </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126555.6507947584!2d5.6773675!3d7.5897686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1047d265f61ec169%3A0x697355bf5efccc06!2sAkoko%20North%20West%20342103%2C%20Ondo!5e0!3m2!1sen!2sng!4v1766388205440!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<h4>Check out my portfolio while you wait.<a href="index.html">Home</a> Thanks</h4>
+</section>
+</body>
+</html>
+
+
+
+

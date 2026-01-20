@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>my first portfolio project</title>
+<style>
+/*conpulsary*/
+* {
+	margin: 0.5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #0a7a3d;   /* Deep green */
+  --bg-color: #f5f5f5;        /* Light background */
+  --text-color: #222;         /* Main text */
+  --accent-color: #f4c430;    /* Soft gold (optional) */
+  --white: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*compulsary*/
+.hero {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  color: var(--white);
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+.hero a {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.hero a:hover {
+  background: #075c2e;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.projects-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.project-card {
+  min-width: 280px;
+height: 200px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  color: white;
+	
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.project-card:nth-child(1) {
+  background: linear-gradient(135deg, #064e3b, #022c22);
+}
+
+.project-card:nth-child(2) {
+  background: linear-gradient(135deg, #1e3a8a, #020617);
+}
+
+.project-card:nth-child(3) {
+  background: linear-gradient(135deg, #7c2d12, #431407);
+}
+
+.project-card:nth-child(4) {
+  background: linear-gradient(135deg, #312e81, #020617);
+}
+.project-track {
+  scroll-behavior: smooth;
+  scroll-padding-left: 20px;
+}
+
+
+.site-header {
+  background: #020617;
+  padding: 16px 20px;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #22c55e;
+}
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links a {
+    margin: 12px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+
+.skills {
+  padding: 60px 20px;
+  background: #020617;
+}
+
+.section-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #0f172a;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card h3 {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+.site-footer {
+  background: #020617;
+  padding: 5px 2px;
+  color: #cbd5e1;
+  margin-top: 15px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #22c55e;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Godwin Oyewole Omolade</h1>
+    <h2>Frontend Developer</h2>
+    <p>
+      I build clean, responsive websites using HTML and CSS,
+      and I’m continuously learning modern frontend development.
+    </p>
+    <a href="contact.html">learn more</a>
+  </div>
+</section>
+
+
+<header class="site-header">
+  <nav class="nav">
+    <div class="logo">Godwin Oyewole Omolade</div>
+
+    <!-- Hamburger checkbox -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Nav links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+
+
+<main>
+<section class="projects">
+  <h2>Projects</h2>
+	<p>Swipe to explore →</p>
+
+  <div class="projects-scroll">
+    <div class="project-card">
+      <h3>Personal Portfolio Website</h3>
+      <p>A responsive website built to showcase my skills.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Secondary School Website</h3>
+      <p>A multi-page website designed for a school.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Cleaning Company Website</h3>
+      <p>A business website highlighting services.</p>
+<a href="https://godwin-omolade.github.io/SoftHand-cleaning/">
+<button id=ser>see more</button>
+</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Clothing Store Website</h3>
+      <p>An online store interface with products.</p>
+    </div>
+  </div>
+</section>
+
+<section class="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, Responsive Design, Flexbox, Grid</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Tools</h3>
+      <p>VS Code, Git (Basics), Browser DevTools</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <p>Problem Solving, Communication, Continuous Learning</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Godwin Oyewole Omolade</p>
+    <p>Frontend Developer</p>
+
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Email</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

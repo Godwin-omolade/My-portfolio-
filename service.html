@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>my services</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-color: #0A7A3D;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* ===== SERVICES GRID ===== */
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ===== SERVICE CARD ===== */
+.card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  font-size: 36px;
+  color: #0A7A3D;
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #0A7A3D;
+}
+
+/* ===== CTA BOX ===== */
+.box {
+  margin: 60px auto 40px;
+  padding: 40px 20px;
+  background: #020617;
+  color: #ffffff;
+  text-align: center;
+}
+
+.box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.box p {
+  margin-bottom: 20px;
+  color: #cbd5e1;
+}
+
+.box a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0A7A3D;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ===== FIXED PROFILE ===== */
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fixed img {
+  border-radius: 50%;
+}
+
+.fixed h4 {
+  font-size: 0.9rem;
+}
+
+.fixed p {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 4px 8px;
+background: black;
+color: white;
+font-size: 18px;
+font-weight: bold;
+width:100%;
+}
+.menu a{
+text-decoration: none;
+font-size: 16px;
+color: white;
+padding: 8px;
+}
+</style>
+</head>
+<div class="nav">
+<div class="logo">Godwin
+</div>
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+<body>
+<section class="hero">
+<h1>My Service</h1>
+<p>Here are some of the key services I offer:</p>
+<div class="hero-content">
+<div class="card">
+<div class="icon"><i class="fa-solid fa-code"></i></div>
+<h2>Web Development</h2>
+<p>Building responsive,
+high performance website using HTML,CSS and javascript.</p>
+<a href="index.html">Visit Project-></a>
+</div>
+<div class="card">
+<div class="icon"><i class="fa-solid fa-palette"></i></div>
+<h2>UI/UX Design</h2>
+<p>designing visually appealing and user friendly interfaces focused on great user experience.</p>
+<a href="#">Visit Project</a>
+</div>
+<div class="card">
+<div class="icon"><i class="fa-solid fa-rocket"></i></div>
+<h2>Frontend Optimization</h2>
+<p>Enhancing site performance with modern JavaScript frameworks and best practices.</p>
+<a href="#">Visit Project</a>
+</div>
+</div>
+<div class="box">
+<h3>Have a project in mind?</h3>
+<p>let's work together to bring your vision to life</p>
+<a href="contact.html">Contact me</a>
+</div>
+
+<div class="fixed">
+<h4>Godwin O. Omolade</h4>
+<p>Frontend Developer</p>
+<img src="image2.png" alt="random pic" width="40">
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html> <html lang="en"> <head> <meata charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>my portfolio about page</title> <style> * { margin: 0; padding: 0px; box-sizing: border-box; } body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); margin: 0; } :root { --primary-color: #0a7a3d; /* Deep green */ --bg-color: #f5f5f5; /* Light background */ --text-color: #222; /* Main text */ --accent-color: #f4c430; /* Soft gold (optional) */ --white: #ffffff; } 
+.container { 
+max-width: 1100px; margin: 0 auto; padding: 20px; } a { text-decoration: none; color: inherit; 
+} 
+.hero{ background-color: #0a7a3d; height: 150px; background-position: center; background-size: cover; 
+} 
+.hero-content{ display: flex; align-items: flex-start; justify-content: space-between; 
+} 
+.hero-content h2{ font-size: 32px; padding: 5px; 
+} 
+.hero-content p{ font-size: 18px; margin-top: 120px; padding: 5px; 
+} 
+.nav{ display: flex; justify-content: space-between; align-items: center; color: white; 
+} 
+.site-header { background: #020617; padding: 10px 8px; margin-bottom: 5px
+} 
+
+.logo{ text-align: center; font-size: 16px; font-weight: bold; }
+ .menu{ font-size: 18px; 
+} 
+.menu a{ color: #0a7a3d; 
+margin-right: 20px;
+}
+ .intro { padding: 16px; } .intro-text { line-height: 1.6; text-align: justify; hyphens: auto; 
+} 
+
+.intro-text img { float: right; margin: 0 0 8px 20px; }
+ .site-footer { background: #020617; padding: 5px 2px; color: #cbd5e1; margin-top: 15px; 
+} 
+.footer-content { max-width: 1100px; margin: auto; text-align: center;
+ } 
+.footer-links a { color: #22c55e; margin: 0 10px; text-decoration: none; 
+} 
+
+.footer-links a:hover { text-decoration: underline; 
+} 
+
+
+.menu a:last-child {
+    margin-right: 0;
+}
+.highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+	padding: 5px 10px;
+}
+
+.call-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none; /* Let the link handle taps */
+}
+
+/* Call button */
+.call-button {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  pointer-events: auto;    /* Make it tappable */
+  touch-action: manipulation; /* Improves mobile tap */
+}
+
+/* Phone icon inside button */
+.call-button img {
+  width: 60px;
+	height: 60px;
+  object-fit: cover;
+	border-radius: 30px;
+  display: block;
+  pointer-events: none; /* Ensure tap goes to link */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+</style> 
+</head> <body> <section class="hero"> <div class="hero-content"> <h2>About me</h2> <p>Godwin O. omolade</p> </div> </section> <header class="site-header"> <div class="nav"> <div class="logo">GODWIN O. OYEWOLE</div> <div class="menu"> <a href="index.html">Home</a> <a href="contact.html">Contact</a> </div> </div> </nav> </header> <main>
+<span class="highlight">Frontend Developer</span>
+
+ <section class="intro"> <h2 class="section-title">A little about me</h2>
+<p class="intro-text"> <img src=image2.png alt="google.com" width="150"> My name is Godwin omolade born and raised in akoko north west, ondo state northern senetorial district. i attended C.A.C primary school ogbagi akoko between the year 2005-2010, and i then later proceed to ahmadiyya grammar school ogbagi akoko for my college education, i gainned admission to Adekunle ajasin university in year 2017. creativity is one major hobbies i admire so much. This is my first porfolio project. I am so confident it will only get better for here. Thanks so much for reading about me. </p> </section> 
+
+<div class="call-container">
+  <a href="tel:+2348034948338" class="call-button">
+    <img src="image3.png" alt="Call Us">
+  </a>
+</div>
+</div>
+</main> <footer class="site-footer"> <div class="footer-content"> <p>&copy; 2025 Godwin Oyewole Omolade</p> <p>Frontend Developer</p> <div class="footer-links"> <a href="#">GitHub</a> <a href="#">LinkedIn</a> <a href="#">Email</a> </div> </div> </footer> </body> <html>
